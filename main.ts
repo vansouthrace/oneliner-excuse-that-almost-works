@@ -1,14 +1,7 @@
+// The Excuse That Almost Works: one believable line to the boss, written to /output/entry.txt.
 import { mkdirSync, writeFileSync } from "node:fs";
 
-// The one line a gamer texts the boss to skip work on GTA 6 launch week.
-// It has to read like something a real person sends in a hurry.
-// Keep it under 20 words: a tired manager believes short texts first.
-const entry =
-  "Power outage took out my whole street, electrician says it won't be back until tonight. Sorry boss.";
-
-// A real text has no trailing newline drama; keep the line exactly as typed.
-const clean = entry.trim();
-
+// The excuse line, composed fresh for this bounty.
+const entry = "Boss, a pipe burst and flooded my home office. Plumber can only come today, I am so sorry.";
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", clean);
-console.log("entry written:", clean);
+writeFileSync("/output/entry.txt", entry);
